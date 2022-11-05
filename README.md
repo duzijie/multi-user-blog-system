@@ -1,37 +1,107 @@
 # 多用户易览博客系统
 
-#### 介绍
-易览博客系统。基于SpringBoot + Vue2.x版本。使用人人开源框架搭建脚手架 + Mybatis Plus作为数据库访问框架。使用Spring Security + JWT作为权限管理框架。该博客系统具有发布文章、留言、私信、举报文章、关注等功能。
-
-#### 软件架构
-软件架构说明
+本系统是一个支持多用户注册的博客系统，具有写博客、浏览其他人博客、留言、点赞等功能。由Vue.js 2.0、Spring boot、Spring Security JWT、 Mybatis等技术构成。
 
 
-#### 安装教程
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## 用户端
 
-#### 使用说明
+### 用户登录页：
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+![用户登录页](./img/user/01.png)
 
 
-#### 特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+### 用户注册页：
+
+![用户注册页](./img/user/02.jpg)
+
+
+
+### 用户登录成功后主页：
+
+![用户登录成功后主页](./img/user/03.jpg)
+
+
+
+### 分类页：
+
+![分类页](./img/user/04.jpg)
+
+
+
+### 文章浏览页：
+
+![文章浏览页1](./img/user/05.jpg)
+
+![文章浏览页2](./img/user/06.jpg)
+
+
+
+### 简介：
+
+![简介](./img/user/07.jpg)
+
+
+
+### 个人文章列表：
+
+![个人文章列表](./img/user/08.jpg)
+
+
+
+### 关注用户：
+
+![关注用户](./img/user/09.jpg)
+
+
+
+### 私信交流：
+
+![私信交流](./img/user/10.jpg)
+
+
+
+### 个人文章管理：
+
+![个人文章管理](./img/user/11.jpg)
+
+
+
+### 文章编辑页面：
+
+![文章编辑页面](./img/user/12.jpg)
+
+
+
+
+
+## 超级管理员后台管理
+
+### 超级管理员登录页：
+
+![超级管理员登录页](./img/admin/01.jpg)
+
+
+
+### 管理员管理：
+
+![管理员管理](./img/admin/02.jpg)
+
+
+
+### 文章过审：
+
+![文章过审](./img/admin/03.jpg)
+
+
+
+### 公告管理：
+
+![公告管理](./img/admin/04.jpg)
+
+![编辑公告](./img/admin/05.jpg)
+
+
+
+需要源码者或其它合作者请联系微信号：**java_developer_1**
