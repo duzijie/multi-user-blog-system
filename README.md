@@ -1,6 +1,7 @@
 # 多用户易览博客系统
 
 本系统是一个支持多用户注册的博客系统，具有写博客、浏览其他人博客、留言、点赞等功能。由Vue.js 2.0、Spring boot、Spring Security JWT、 Mybatis等技术构成。
+可访问 http://112.74.34.248/ 预览博客系统一部分内容。需要完整版请联系微信 java_developer_1
 
 
 
