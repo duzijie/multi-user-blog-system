@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yilan.blog.dao.UserDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.yilan.blog.entity.UserEntity" id="userMap">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="email" column="email"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="avatar" column="avatar"/>
+        <result property="phone" column="phone"/>
+        <result property="sex" column="sex"/>
+        <result property="birthday" column="birthday"/>
+        <result property="address" column="address"/>
+        <result property="islock" column="islock"/>
+        <result property="createTime" column="create_time"/>
+        <result property="introduction" column="introduction"/>
+        <result property="motto" column="motto"/>
+        <result property="styleId" column="style_id"/>
+        <result property="roles" column="roles"/>
+    </resultMap>
+
+<!--    查询普通用户-->
+    <select id="searchUsersByParams" resultType="com.yilan.blog.entity.UserEntity" parameterType="com.yilan.blog.entity.UserEntity">
+        select * from user u
+        <where>
+            <if test="id!=null and id!=''">
+                and u.id=#{id}
+            </if>
+            <if test="name!=null and name!=''">
+                and u.name like "%"#{name}"%"
+            </if>
+            <if test="email!=null and email!=''">
+                and u.email=#{email}
+            </if>
+            <if test="username!=null and username!=''">
+                and u.username=#{username}
+            </if>
+<!--            <if test="avatar!=null and avatar!=''">-->
+<!--                and u.avatar=#{avatar}-->
+<!--            </if>-->
+            <if test="phone!=null and phone!=''">
+                and u.phone=#{phone}
+            </if>
+
+            <if test="sex!=null">
+                and u.sex=#{sex}
+            </if>
+
+            <if test="birthday!=null">
+                and u.birthday=#{birthday}
+            </if>
+            <if test="address!=null and address!=''">
+                and u.address like "%"#{address}"%"
+            </if>
+
+            <if test="islock!=null">
+                and u.islock=#{islock}
+            </if>
+
+            <if test="createTime!=null">
+                and u.create_time=#{createTime}
+            </if>
+            <if test="introduction!=null and introduction!=''">
+                and u.introduction=#{introduction}
+            </if>
+            <if test="motto!=null and motto!=''">
+                and u.motto=#{motto}
+            </if>
+            <if test="1==1">
+                and u.roles="ROLE_USER"
+            </if>
+        </where>
+    </select>
+
+
+
+<!--查询管理员-->
+    <select id="searchAdminsByParams" resultType="com.yilan.blog.entity.UserEntity" parameterType="com.yilan.blog.entity.UserEntity">
+        select * from user u
+        <where>
+            <if test="id!=null and id!=''">
+                and u.id=#{id}
+            </if>
+            <if test="name!=null and name!=''">
+                and u.name like "%"#{name}"%"
+            </if>
+            <if test="email!=null and email!=''">
+                and u.email=#{email}
+            </if>
+            <if test="username!=null and username!=''">
+                and u.username=#{username}
+            </if>
+
+            <if test="phone!=null and phone!=''">
+                and u.phone=#{phone}
+            </if>
+            <if test="sex!=null">
+                and u.sex=#{sex}
+            </if>
+            <if test="birthday!=null">
+                and u.birthday=#{birthday}
+            </if>
+            <if test="address!=null and address!=''">
+                and u.address like "%"#{address}"%"
+            </if>
+            <if test="islock!=null">
+                and u.islock=#{islock}
+            </if>
+
+            <if test="createTime!=null">
+                and u.create_time=#{createTime}
+            </if>
+            <if test="introduction!=null and introduction!=''">
+                and u.introduction=#{introduction}
+            </if>
+            <if test="motto!=null and motto!=''">
+                and u.motto=#{motto}
+            </if>
+            <if test="1==1">
+                and u.roles="ROLE_ADMIN"
+            </if>
+        </where>
+    </select>
+
+</mapper>
